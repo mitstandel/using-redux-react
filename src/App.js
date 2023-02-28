@@ -1,13 +1,14 @@
+import { Provider } from 'react-redux';
+import { store } from './store';
 import { CounterButton } from './CounterButton';
 import './App.css';
-import { CounterProvider } from './CounterProvider';
 
 const App = () => {
 	return (
-		<CounterProvider>
+		<Provider store={store}>
 			<h1>State Management Example</h1>
 			<CounterButton />
-		</CounterProvider>
+		</Provider>
 	);
 }
 
